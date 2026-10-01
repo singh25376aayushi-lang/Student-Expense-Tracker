@@ -1,6 +1,9 @@
 # Student Expense Tracker
 
 A responsive and user-friendly web application designed to help students manage, track, and understand their daily expenses.
+## Live Demo
+
+[View Student Expense Tracker](https://singh25376aayushi-lang.github.io/Student-Expense-Tracker/)
 
 ## Purpose
 
