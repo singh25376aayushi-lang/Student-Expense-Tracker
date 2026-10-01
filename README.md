@@ -29,6 +29,10 @@ The purpose of this project is to build a practical and user-friendly Student Ex
 - Expense data stored using Local Storage
 - Toast notifications for user actions
 - Date validation to prevent future dates
+  
+## Screenshot
+
+![Student Expense Tracker](expense-tracker.png)
 
 ## Technologies Used
 
