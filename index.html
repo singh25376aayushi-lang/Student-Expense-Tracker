@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Expense Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
+
+
+    <div class="container">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <h1>Student Expense Tracker</h1>
+
+                    <p>
+                        Track your daily expenses easily
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="month-box">
+
+                📅
+
+                <span id="currentMonth"></span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- SUMMARY CARDS -->
+
+        <section class="summary-container">
+
+
+            <div class="summary-card purple">
+
+                <div class="card-icon">
+                    💳
+                </div>
+
+                <div>
+
+                    <h3>Total Expenses</h3>
+
+                    <strong id="totalAmount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card blue">
+
+                <div class="card-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>Total Transactions</h3>
+
+                    <strong id="totalTransactions">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card pink">
+
+                <div class="card-icon">
+                    👑
+                </div>
+
+                <div>
+
+                    <h3>Highest Expense</h3>
+
+                    <strong id="highestExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card yellow">
+
+                <div class="card-icon">
+                    🍴
+                </div>
+
+                <div>
+
+                    <h3>Food Expenses</h3>
+
+                    <strong id="foodExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card green">
+
+                <div class="card-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <h3>Study Expenses</h3>
+
+                    <strong id="studyExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card light-blue">
+
+                <div class="card-icon">
+                    🚌
+                </div>
+
+                <div>
+
+                    <h3>Travel Expenses</h3>
+
+                    <strong id="travelExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card light-pink">
+
+                <div class="card-icon">
+                    🛒
+                </div>
+
+                <div>
+
+                    <h3>Shopping Expenses</h3>
+
+                    <strong id="shoppingExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card lavender">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <div>
+
+                    <h3>Current Month Expenses</h3>
+
+                    <strong id="monthlyExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ADD EXPENSE + CHART -->
+
+        <section class="main-section">
+
+
+            <!-- ADD EXPENSE -->
+
+            <div class="panel add-panel">
+
+                <div class="panel-heading">
+
+                    <div class="heading-icon">
+                        ＋
+                    </div>
+
+                    <h2>
+                        Add New Expense
+                    </h2>
+
+                </div>
+
+
+                <label>
+                    Expense Name
+                </label>
+
+                <div class="input-box">
+
+                    <span>🏷️</span>
+
+                    <input
+                        type="text"
+                        id="expenseName"
+                        placeholder="Enter expense name"
+                    >
+
+                </div>
+
+
+
+                <label>
+                    Amount
+                </label>
+
+                <div class="input-box">
+
+                    <span>₹</span>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Enter amount"
+                        min="1"
+                    >
+
+                </div>
+
+
+
+                <label>
+                    Category
+                </label>
+
+                <div class="input-box">
+
+                    <span>▦</span>
+
+                    <select id="category">
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Travel">
+                            Travel
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                    <span>⌄</span>
+
+                </div>
+
+
+
+                <label>
+                    Date
+                </label>
+
+                <div class="input-box">
+
+                    <span>📅</span>
+
+                    <input
+                        type="date"
+                        id="date"
+                    >
+
+                </div>
+
+
+
+                <button
+                    id="addExpenseBtn"
+                    class="add-btn"
+                >
+                    Add Expense
+                </button>
+
+            </div>
+
+
+
+            <!-- CHART -->
+
+            <div class="panel chart-panel">
+
+                <div class="panel-heading chart-heading">
+
+                    <div class="heading-icon blue-icon">
+                        ◕
+                    </div>
+
+                    <h2>
+                        Expense Overview
+                    </h2>
+
+                    <select id="chartFilter">
+
+                        <option value="all">
+                            All Time
+                        </option>
+
+                        <option value="month">
+                            This Month
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas id="expenseChart"></canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EXPENSE LIST -->
+
+        <section class="expenses-panel">
+
+
+            <div class="expenses-header">
+
+
+                <div class="expenses-title">
+
+                    <div class="list-icon">
+                        ☷
+                    </div>
+
+                    <h2>
+                        Your Expenses
+                    </h2>
+
+                </div>
+
+
+
+                <div class="expense-actions">
+
+
+                    <div class="search-box">
+
+                        🔍
+
+                        <input
+                            type="text"
+                            id="searchExpense"
+                            placeholder="Search expense..."
+                        >
+
+                    </div>
+
+
+
+                    <select id="filterCategory">
+
+                        <option value="All">
+                            All Categories
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Travel">
+                            Travel
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+
+                    <button id="clearAllBtn">
+
+                        🗑️ Clear All
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div id="expenseList"></div>
+
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         EDIT EXPENSE MODAL
+    ========================== -->
+
+    <div
+        id="editExpenseModal"
+        class="edit-modal"
+    >
+
+        <div class="edit-modal-overlay"></div>
+
+
+        <div class="edit-modal-box">
+
+
+            <div class="edit-modal-header">
+
+                <div>
+
+                    <div class="edit-modal-icon">
+                        ✏️
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Edit Expense
+                    </h2>
+
+                    <p>
+                        Update your expense details
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="closeEditModal"
+                    class="modal-close"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <div class="edit-modal-body">
+
+
+                <label>
+                    Expense Name
+                </label>
+
+                <div class="input-box">
+
+                    <span>🏷️</span>
+
+                    <input
+                        type="text"
+                        id="editExpenseName"
+                        placeholder="Enter expense name"
+                    >
+
+                </div>
+
+
+
+                <label>
+                    Amount
+                </label>
+
+                <div class="input-box">
+
+                    <span>₹</span>
+
+                    <input
+                        type="number"
+                        id="editExpenseAmount"
+                        placeholder="Enter amount"
+                        min="1"
+                    >
+
+                </div>
+
+
+
+                <label>
+                    Category
+                </label>
+
+                <div class="input-box">
+
+                    <span>▦</span>
+
+                    <select id="editExpenseCategory">
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Travel">
+                            Travel
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <label>
+                    Date
+                </label>
+
+                <div class="input-box">
+
+                    <span>📅</span>
+
+                    <input
+                        type="date"
+                        id="editExpenseDate"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="edit-modal-footer">
+
+                <button
+                    id="cancelEditBtn"
+                    class="modal-cancel-btn"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    id="saveEditBtn"
+                    class="modal-save-btn"
+                    type="button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CHART.JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- MAIN JS -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
