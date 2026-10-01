@@ -32,7 +32,7 @@ The purpose of this project is to build a practical and user-friendly Student Ex
   
 ## Screenshot
 
-![Student Expense Tracker](expense-tracker.png)
+![Student Expense Tracker](expense-tracker.png.png)
 
 ## Technologies Used
 
